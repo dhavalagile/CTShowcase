@@ -269,6 +269,9 @@ open class CTShowcaseView: UIView {
             originY = targetRect.origin.y + targetRect.size.height + margin * 2
         }
         
+        if originY < 120.0 {
+            originY = 120.0
+        }
         let titleRegion = CGRect(x: margin, y: originY, width: textRegionWidth, height: titleSize.height)
         let messageRegion = CGRect(x: margin, y: originY + spacingBetweenTitleAndText + titleSize.height, width: textRegionWidth, height: messageSize.height)
    
